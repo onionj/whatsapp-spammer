@@ -9,7 +9,7 @@ watsapp spammer created by selenium and python
 ### requirement:
 	install `pythoon3`
 	install `Firefox browser`
-  [geckodriver(Firefox web driver)](https://github.com/mozilla/geckodriver/releases) 
+  	[geckodriver(Firefox web driver)](https://github.com/mozilla/geckodriver/releases) 
 
 
   
