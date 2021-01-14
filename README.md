@@ -1,5 +1,5 @@
 
-watsapp spammer created by selenium and python
+# watsapp spammer created by selenium and python
 
 * [x] wiindows
 * [ ] linux 
@@ -12,10 +12,16 @@ watsapp spammer created by selenium and python
   	[geckodriver(Firefox web driver)](https://github.com/mozilla/geckodriver/releases) 
 
 
-  
-
-
 ### usage:
 	`pip install requirements.txt`
 	`python watsappspammer.py`
  
+ ▒█████   ███▄    █  ██▓ ▒█████   ███▄    █ 
+▒██▒  ██▒ ██ ▀█   █ ▓██▒▒██▒  ██▒ ██ ▀█   █ 
+▒██░  ██▒▓██  ▀█ ██▒▒██▒▒██░  ██▒▓██  ▀█ ██▒
+▒██   ██░▓██▒  ▐▌██▒░██░▒██   ██░▓██▒  ▐▌██▒
+░ ████▓▒░▒██░   ▓██░░██░░ ████▓▒░▒██░   ▓██░
+░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ░▓  ░ ▒░▒░▒░ ░ ▒░   ▒ ▒ 
+  ░ ▒ ▒░ ░ ░░   ░ ▒░ ▒ ░  ░ ▒ ▒░ ░ ░░   ░ ▒░
+░ ░ ░ ▒     ░   ░ ░  ▒ ░░ ░ ░ ▒     ░   ░ ░ 
+    ░ ░           ░  ░      ░ ░           ░ </OƝioN
