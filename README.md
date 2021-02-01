@@ -7,13 +7,13 @@
 ## app version : 1.2.0
 
 ### requirement:
-	install `python3`
-	install `Firefox browser`
-  	[geckodriver(Firefox web driver)](https://github.com/mozilla/geckodriver/releases) 
-
+install `python3` \
+install `Firefox browser` \
+[geckodriver(Firefox web driver)](https://github.com/mozilla/geckodriver/releases) \
+`pip install requirements.txt`
 
 ### usage:
-	`pip install requirements.txt`
+	
 	`python watsappspammer.py`
 ```
  ▒█████   ███▄    █  ██▓ ▒█████   ███▄    █ 
