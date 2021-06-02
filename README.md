@@ -1,4 +1,4 @@
-# watsapp spammer created by selenium and python
+# whatsapp spammer created by selenium and python
 
 - [x] wiindows
 - [x] linux
@@ -18,34 +18,16 @@ install `Firefox browser` \
 
 ```
 
-method 1
+mode 1
 pm
 pm pm
 pm pm pm
 pm pm pm pm
 pm pm pm pm pm
 
-method 0
+mode 0
 pm
 pm
 pm
-
-```
-
-```
-
-▒█████ ███▄ █ ██▓ ▒█████ ███▄ █
-▒██▒ ██▒ ██ ▀█ █ ▓██▒▒██▒ ██▒ ██ ▀█ █
-▒██░ ██▒▓██ ▀█ ██▒▒██▒▒██░ ██▒▓██ ▀█ ██▒
-▒██ ██░▓██▒ ▐▌██▒░██░▒██ ██░▓██▒ ▐▌██▒
-░ ████▓▒░▒██░ ▓██░░██░░ ████▓▒░▒██░ ▓██░
-░ ▒░▒░▒░ ░ ▒░ ▒ ▒ ░▓ ░ ▒░▒░▒░ ░ ▒░ ▒ ▒
-░ ▒ ▒░ ░ ░░ ░ ▒░ ▒ ░ ░ ▒ ▒░ ░ ░░ ░ ▒░
-░ ░ ░ ▒ ░ ░ ░ ▒ ░░ ░ ░ ▒ ░ ░ ░
-░ ░ ░ ░ ░ ░ ░ </OƝioN
-
-```
-
-```
 
 ```
