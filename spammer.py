@@ -94,7 +94,7 @@ def start_app():
     # data input
     usr = input("[+] Enter username (in history chat): ")
     pm = input("[+] Enter text pm: ")
-    number_pm = input("[+] Enter number of pm: ")
+    number_pm = str(input("[+] Enter number of pm: "))
     mode = input(
         "[+] Enter mode [ type 1 for method one , or just enter (method zero) ] ")
     input("[-] scan QR code and prees enter ")
