@@ -38,14 +38,14 @@ def get_whatsapp_page(driver):
 
 def mode0(driver, number, usr, pm):
     try:
-        find_user(usr, driver)
+        if find_user(usr, driver):
 
-        for _ in tqdm(range(number), desc='sending.. '):
-            send_message(pm, driver)
+            for _ in tqdm(range(number), desc='sending.. '):
+                send_message(pm, driver)
 
-        print(color.RED+"[-] done")
-        print("\n\n")
-        logo()
+            print(color.RED+"[-] done")
+            print("\n\n")
+            logo()
 
     except NoSuchElementException:
         # user name not fund in history chat or someting
@@ -57,25 +57,24 @@ def mode0(driver, number, usr, pm):
 # method one
 def mode1(driver, number, usr, pm):
     try:
-        find_user(usr, driver)
-
-        row = 5
-        flag = 1
-
-        for _ in tqdm(range(number), desc='sending.. '):
-            if flag <= row:
-                msg = pm * flag
-                send_message(msg, driver)
-                flag = flag + 1
-                continue
-
+        if find_user(usr, driver):
+            row = 5
             flag = 1
-            msg = pm
-            send_message(msg, driver)
 
-        print(color.RED+"[-] done")
-        print("\n\n")
-        logo()
+            for _ in tqdm(range(number), desc='sending.. '):
+                if flag <= row:
+                    msg = pm * flag
+                    send_message(msg, driver)
+                    flag = flag + 1
+                    continue
+
+                flag = 1
+                msg = pm
+                send_message(msg, driver)
+
+            print(color.RED+"[-] done")
+            print("\n\n")
+            logo()
 
     except NoSuchElementException:
         # user name not fund in history chat or someting error
