@@ -45,13 +45,11 @@ def mode0(driver, number, usr, pm):
 
             print(color.RED+"[-] done")
             print("\n\n")
-            logo()
 
     except NoSuchElementException:
         # user name not fund in history chat or someting
         print(color.RED+"[-] error ")
         print("\n\n")
-        logo()
 
 
 # method one
@@ -74,13 +72,11 @@ def mode1(driver, number, usr, pm):
 
             print(color.RED+"[-] done")
             print("\n\n")
-            logo()
 
     except NoSuchElementException:
         # user name not fund in history chat or someting error
         print(color.RED+"[-] error ")
         print("\n\n")
-        logo()
 
 
 def start_app():
@@ -94,7 +90,7 @@ def start_app():
     # data input
     usr = input("[+] Enter username (in history chat): ")
     pm = input("[+] Enter text pm: ")
-    number_pm = str(input("[+] Enter number of pm: "))
+    number_pm = int(input("[+] Enter number of pm: "))
     mode = input(
         "[+] Enter mode [ type 1 for method one , or just enter (method zero) ] ")
     input("[-] scan QR code and prees enter ")
@@ -104,10 +100,12 @@ def start_app():
     # method one ### have bug
     if mode == "1":
         mode1(driver, number_pm, usr, pm)
+        driver.quit()
         return
 
     # method normall
     mode0(driver, number_pm, usr, pm)
+    driver.quit()
 
 
 def clear():
@@ -146,30 +144,16 @@ def logo(clear_shell=False):
     """+color.GREEN)
 
 
-# print log in shel
-def show_log(msg, sended_count,  all_count, method):
-    clear()
-    print(f"""
-
-[ ] start by text:{msg}
-[ ] method: {method}
-[*] send {sended_count + 1} / {all_count}
-""")
-
-
 def send_message(msg, driver):
     ''' scan chat and find message fild and send message '''
-    # show_log(msg, i, number, method)
+
     try:
-        message_box_xpath = "/html//div[@id='main']/footer[@class='_2vJ01']//div[@class='_3FRCZ copyable-text selectable-text']"
+        message_box_xpath = "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[2]"
         message_box_fild = driver.find_element_by_xpath(message_box_xpath)
         message_box_fild.send_keys(msg, Keys.ENTER)
 
     except NoSuchElementException:
-        pass
-
-    # send_button=driver.find_element_by_class_name("_1U1xa")
-    # send_button.click()
+        print('error in send message')
 
 
 def find_user(user_name, driver):
@@ -187,8 +171,6 @@ def find_user(user_name, driver):
     except:
         print('[!] user not find!')
         return False
-
-# method zero
 
 
 start_app()
