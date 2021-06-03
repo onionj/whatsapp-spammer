@@ -1,6 +1,6 @@
 # whatsapp spammer created by selenium and python
 
-- [x] wiindows
+- [x] windows
 - [x] linux
 - [ ] mac
 
