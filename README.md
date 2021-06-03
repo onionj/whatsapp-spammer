@@ -10,11 +10,11 @@
 
 install `python3` \
 install `Firefox browser` \
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 ### usage:
 
-    `python watsappspammer.py`
+    `python spammer.py`
 
 ```
 
@@ -24,10 +24,13 @@ pm pm
 pm pm pm
 pm pm pm pm
 pm pm pm pm pm
+pm
+pm pm
+...
 
 mode 0
 pm
 pm
 pm
-
+...
 ```
