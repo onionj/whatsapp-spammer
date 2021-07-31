@@ -9,8 +9,8 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import Firefox
 from selenium.webdriver.common.keys import Keys
-from time import sleep
-from os import system, name
+# from time import sleep
+from os import system
 from sys import platform
 from tqdm import tqdm
 
@@ -86,26 +86,33 @@ def start_app():
     driver = open_driver()
 
     get_whatsapp_page(driver)
-
-    # data input
-    usr = input("[+] Enter username (in history chat): ")
-    pm = input("[+] Enter text pm: ")
-    number_pm = int(input("[+] Enter number of pm: "))
-    mode = input(
-        "[+] Enter mode [ type 1 for method one , or just enter (method zero) ] ")
     input("[-] scan QR code and prees enter ")
 
-    pm = pm + " "
+    try:
+        while True:
+            # data input
+            usr = input("[+] Enter username (in history chat): ")
+            pm = input("[+] Enter text: ")
+            number_pm = int(input("[+] Enter number of pm: "))
+            mode = input(
+                "[+] Enter mode [ type 1 for method 'Pro' , or just enter] ")
 
-    # method one ### have bug
-    if mode == "1":
-        mode1(driver, number_pm, usr, pm)
-        driver.quit()
-        return
+            pm = pm + " "
 
-    # method normall
-    mode0(driver, number_pm, usr, pm)
-    driver.quit()
+            # method pro
+            if mode == "1":
+                mode1(driver, number_pm, usr, pm)
+                continue
+            # method normall
+            mode0(driver, number_pm, usr, pm)
+
+    except KeyboardInterrupt:
+        print(' EXIT! ')
+    except Exception as err:
+        print('[!]' + err)
+
+    # finally:
+    #     driver.quit()
 
 
 def clear():
@@ -148,7 +155,10 @@ def send_message(msg, driver):
     ''' scan chat and find message fild and send message '''
 
     try:
-        message_box_xpath = "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[2]"
+        # /html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]
+        # "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[2]"
+
+        message_box_xpath = "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]"
         message_box_fild = driver.find_element_by_xpath(message_box_xpath)
         message_box_fild.send_keys(msg, Keys.ENTER)
 
@@ -166,7 +176,8 @@ def find_user(user_name, driver):
 
     except NoSuchElementException:
         print('[!] user not find!')
-        return False
+        input('[ ] please open target chat and press enter')
+        return True
 
     except:
         print('[!] user not find!')
