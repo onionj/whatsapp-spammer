@@ -155,10 +155,7 @@ def send_message(msg, driver):
     ''' scan chat and find message fild and send message '''
 
     try:
-        # /html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]
-        # "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[2]"
-
-        message_box_xpath = "/html/body/div/div[1]/div[1]/div[4]/div[1]/footer/div[1]/div[2]/div/div[1]/div/div[2]"
+        message_box_xpath = "/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
         message_box_fild = driver.find_element_by_xpath(message_box_xpath)
         message_box_fild.send_keys(msg, Keys.ENTER)
 
